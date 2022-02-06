@@ -1,1 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Abecedario Infantil</title>
+<style type="text/css">
+select {
+width: 100px;
+}
+</style>
+<script language="javascript">
+abc = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z'
+aABC = abc.split(',')
+function pintaABC(){
+fin = parseInt(document.getElementById('txtFin').value)
+tbl = '<table border="0" width="500px" cellpadding="0" cellspacing="0" style="border-collapse: collapse; border: silver 0px solid;">'
++ '<caption>ABECEDARIO</caption>'
++ '<tr>'
+for (i = 0; i <= fin - 1; i++){
+if (i % 5 == 0)
+tbl += '</tr><tr>'
+color = (i % 2 == 0) ? '#CCCCCC' : '#999999'
+tbl += '<td align="center" bgcolor="'+ color +'">' + aABC[i] + '</td>'
+}
+tbl += '</tr><table>'
+document.getElementById('divABC').innerHTML = tbl
+}
+</script>
+</head>
+<body>
+<label>Si cada letra del abecedario se le asigna un numero consecutivo.</label><br /><br />
+<label>¿Cuantas letras del abecedario quieres ver?</label>
+<input type="text" id="txtFin" name="txtFin" value="" />
+<button type="button" onclick="pintaABC()">Mostrar</button>
+<div id="divABC"></div>
+</body>
+</html>
 
