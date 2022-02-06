@@ -9,7 +9,7 @@ width: 100px;
 }
 </style>
 <script language="javascript">
-abc = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,ñ,o,p,q,r,s,t,u,v,w,x,y,z'
+abc = 'A,B,C,CH,D,E,F,G,H,I,J,K,L,M,N,Ñ,O,P,Q,R,S,T,U,V,W,X,Y,Z'
 aABC = abc.split(',')
 function pintaABC(){
 fin = parseInt(document.getElementById('txtFin').value)
@@ -28,8 +28,8 @@ document.getElementById('divABC').innerHTML = tbl
 </script>
 </head>
 <body>
-<label>Si cada letra del abecedario se le asigna un numero consecutivo.</label><br /><br />
-<label>¿Cuantas letras del abecedario quieres ver?</label>
+
+<label>Presione un numero</label>
 <input type="text" id="txtFin" name="txtFin" value="" />
 <button type="button" onclick="pintaABC()">Mostrar</button>
 <div id="divABC"></div>
